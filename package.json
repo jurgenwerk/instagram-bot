@@ -1,0 +1,29 @@
+{
+  "name": "instagram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurgenwerk/instagram-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jurgenwerk/instagram-bot/issues"
+  },
+  "homepage": "https://github.com/jurgenwerk/instagram-bot#readme",
+  "dependencies": {
+    "instagram-private-api": "^1.45.3",
+    "node-fetch": "^2.6.7",
+    "puppeteer": "^13.4.1"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.1",
+    "mocha": "^9.2.2",
+    "typescript": "^4.6.2"
+  }
+}
