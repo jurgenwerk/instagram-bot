@@ -1,0 +1,73 @@
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  }
+
+  .wrapper {
+    height: 800px;
+    width: 800px;
+    background: url({{BACKGROUND_IMAGE_URL}});
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .commit {
+    margin: auto;
+    margin-left: {{MARGIN_LEFT}}px;
+    margin-top: {{MARGIN_TOP}}px;
+    min-width: 350px;
+    background: white;
+    padding: 15px 18px;
+  }
+
+  .commit__top {
+    font-weight: bold;
+    color: #24292e;
+    font-size: 1.4rem;
+  }
+
+  .commit__bottom {
+    padding-top: 14px
+  }
+
+  .avatar-image {
+    height: 2em;
+    width: 2em;
+    border-radius: 4px;
+  }
+
+  .committer {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #586069;
+    padding-left: 0.3rem;
+  }
+
+  .committed {
+    font-size: 1.2rem;
+    color: #586069;
+    font-weight: 400;
+  }
+
+  .next-to-avatar {
+    vertical-align: super;
+  }
+</style>
+
+<div class="wrapper">
+  <div class="commit">
+    <div class="commit__top">
+      {{COMMIT_MESSAGE}}
+    </div>
+    <div class="commit__bottom">
+      <img class="avatar-image" src="{{AVATAR_IMAGE_URL}}">
+      <span class="next-to-avatar">
+        <span class="committer">{{AUTHOR}}</span>
+        <span class="committed">committed on {{TIME}}</span>
+      </span>
+    </div>
+  </div>
+</div>
