@@ -10,14 +10,24 @@ describe("fetcher", function () {
           actor: {
             avatar_url: "avatar_url",
             display_login: "craig",
+            login: "craig",
+            url: "url",
           },
           created_at: "created_at",
           payload: {
             commits: [
               {
+                author: {
+                  email: "email",
+                  name: "name",
+                },
                 message: "what the shit java eating too much memory again",
               },
               {
+                author: {
+                  email: "email",
+                  name: "name",
+                },
                 message: "no cursing here",
               },
             ],
