@@ -19,7 +19,7 @@
   "dependencies": {
     "instagram-private-api": "^1.45.3",
     "node-fetch": "^2.6.7",
-    "puppeteer": "^13.4.1"
+    "puppeteer": "10.0.0"
   },
   "devDependencies": {
     "@types/mocha": "^9.1.0",
