@@ -17,7 +17,7 @@ type GithubCommit = {
 };
 
 type GithubEvent = {
-  type: "PushEvent"; // Can also be "CreateEvent", "PullRequestReviewEvent", ... but unsupported for now
+  type: string;
   actor: {
     url: string;
     avatar_url: string;
@@ -89,8 +89,11 @@ export function extractNaughtyCommits(events: GithubEvent[]): Commit[] {
 
 export function filterCommits(commits: Commit[]): Commit[] {
   return commits.filter((commit) => {
-    let minWords = 4;
-    return commit.message.split(" ").length >= minWords;
+    let minWords = 3;
+    let maxWords = 30;
+    let wordCount = commit.message.split(" ").length;
+
+    return wordCount >= minWords && wordCount <= maxWords;
   });
 }
 
