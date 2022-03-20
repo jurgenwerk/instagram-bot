@@ -52,7 +52,7 @@ export async function fetchEvents(): Promise<GithubEvent[]> {
 
 export function extractNaughtyCommits(events: GithubEvent[]): Commit[] {
   let naughtyWords = readFileSync(
-    `${process.cwd()}/assets/cursewords.txt`,
+    `${__dirname}/../assets/cursewords.txt`,
     "utf8"
   )
     .split("\n")

@@ -3,7 +3,7 @@ import { readFileSync } from "fs";
 
 export function render(commit: Commit) {
   let templateString = readFileSync(
-    `${process.cwd()}/renderer/template.html`,
+    `${__dirname}/../assets/template.html`,
     "utf8"
   );
   templateString = templateString.replace("{{AUTHOR}}", commit.profile_name);
